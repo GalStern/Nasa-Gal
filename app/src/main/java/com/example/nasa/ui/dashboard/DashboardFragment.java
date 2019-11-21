@@ -9,18 +9,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 
 import com.example.nasa.R;
-import com.example.nasa.ui.flashcard.FlashcardCollectionFragment;
-import com.example.nasa.ui.flashcard.FlashcardDetailActivity;
+import com.example.nasa.ui.flashcard.FlashcardActivity;
 import com.example.nasa.ui.quiz.QuizStartingActivity;
 import com.example.nasa.ui.video.YouTubeActivity;
-import com.example.nasa.ui.video.YoutubePlayerActivity;
-import com.google.android.youtube.player.YouTubeBaseActivity;
 
 
 public class DashboardFragment extends Fragment {
@@ -70,7 +65,8 @@ public class DashboardFragment extends Fragment {
     //Intent to open Flashcard learning app
     //Might not need this as the flashcard is a fragment
     public void openFlashcard() {
-
+        Intent intent = new Intent(this.getContext(), FlashcardActivity.class);
+        startActivity(intent);
     }
 
     //Intent to open Quiz app

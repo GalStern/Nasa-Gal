@@ -1,11 +1,8 @@
 package com.example.nasa.ui.flashcard;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,24 +18,21 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlashcardCollectionFragment extends Fragment {
+public class FlashcardActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.flashcard_collection, container, false);
-        recyclerView = view.findViewById(R.id.flashcard_rv);
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.flashcard_collection);
+        recyclerView = findViewById(R.id.flashcard_rv);
         LinearLayoutManager layoutManager
-                = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+                = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
-
         final FlashcardCollectionAdapter flashcardCollectionAdapter = new FlashcardCollectionAdapter();
         recyclerView.setAdapter(flashcardCollectionAdapter);
 
-        final RequestQueue requestQueue =  Volley.newRequestQueue(getActivity());
+        final RequestQueue requestQueue =  Volley.newRequestQueue(this);
         String url = "https://api.le-systeme-solaire.net/rest/bodies?data=englishName,isPlanet,density,gravity,discoveredBy,discoveryDate";
 
 
@@ -49,7 +43,7 @@ public class FlashcardCollectionFragment extends Fragment {
                 SolarSystem solarSystem = gson.fromJson(response, SolarSystem.class);
                 List<Bodies> solarSBodies = solarSystem.getBodies();
                 // I save my results to the database so I can retrieve it later in my other activities.
-                Database db = Database.getInstance(getContext());
+                Database db = Database.getInstance(getApplicationContext());
                 // Keep in mind that this insertAll query will be blocking the main thread, so the
                 // program will be stuck at this line of code until the query finishes.
                 db.ssBodiesDao().insertAll(solarSBodies);
@@ -75,8 +69,5 @@ public class FlashcardCollectionFragment extends Fragment {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, responseListener,
                 errorListener);
         requestQueue.add(stringRequest);
-        return view;
-
     }
-
 }
