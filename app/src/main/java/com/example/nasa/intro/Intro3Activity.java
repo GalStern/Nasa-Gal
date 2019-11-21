@@ -1,4 +1,4 @@
-package com.example.nasa.ui.intro;
+package com.example.nasa.intro;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,18 +8,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nasa.Home;
 import com.example.nasa.R;
-import com.example.nasa.ui.dashboard.DashboardActivity;
-import com.example.nasa.ui.dashboard.DashboardFragment;
+import com.example.nasa.learning.dashboard.DashboardActivity;
 
-public class Intro2Activity  extends AppCompatActivity {
+public class Intro3Activity  extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro2);
+        setContentView(R.layout.activity_intro3);
     }
     public void changeLayout(View view){
-        Intent intent = new Intent(this, Intro3Activity.class);
+        Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 

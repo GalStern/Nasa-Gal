@@ -9,7 +9,7 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
     android:background="@drawable/bg"
-    tools:context=".ui.flashcard.FlashcardDetailActivity">
+    tools:context=".learning.flashcard.FlashcardDetailActivity">
 
     <TextView
         android:id="@+id/flashcard_name_detailed"

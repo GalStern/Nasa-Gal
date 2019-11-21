@@ -1,4 +1,4 @@
-package com.example.nasa.ui.quiz;
+package com.example.nasa.learning.quiz;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;

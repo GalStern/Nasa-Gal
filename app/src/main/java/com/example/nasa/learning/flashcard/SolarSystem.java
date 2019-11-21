@@ -1,4 +1,4 @@
-package com.example.nasa.ui.flashcard;
+package com.example.nasa.learning.flashcard;
 
 import java.util.List;
 

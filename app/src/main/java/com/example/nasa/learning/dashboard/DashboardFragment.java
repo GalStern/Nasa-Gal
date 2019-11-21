@@ -1,4 +1,4 @@
-package com.example.nasa.ui.dashboard;
+package com.example.nasa.learning.dashboard;
 
 
 import android.content.Intent;
@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 
 import com.example.nasa.R;
-import com.example.nasa.ui.flashcard.FlashcardActivity;
-import com.example.nasa.ui.quiz.QuizStartingActivity;
-import com.example.nasa.ui.video.YouTubeActivity;
+import com.example.nasa.learning.flashcard.FlashcardActivity;
+import com.example.nasa.learning.quiz.QuizStartingActivity;
+import com.example.nasa.learning.video.YouTubeActivity;
 
 
 public class DashboardFragment extends Fragment {

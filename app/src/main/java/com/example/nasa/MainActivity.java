@@ -10,7 +10,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 
-import com.example.nasa.ui.intro.IntroActivity;
+import com.example.nasa.intro.IntroActivity;
+import com.example.nasa.learning.flashcard.Database;
+import com.example.nasa.learning.users.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: starts");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         GetRawData getRawData = new GetRawData();
         getRawData.execute("https://images-api.nasa.gov/search?q=apollo%2011 &description=moon%20landing&media_type=image");
 

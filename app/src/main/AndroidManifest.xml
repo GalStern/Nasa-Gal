@@ -11,16 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.intro.IntroActivity" />
-        <activity android:name=".ui.intro.Intro2Activity" />
-        <activity android:name=".ui.intro.Intro3Activity" />
-        <activity android:name=".ui.quiz.QuizStartingActivity" />
-        <activity android:name=".ui.quiz.QuizActivity" />
-        <activity android:name=".ui.video.YouTubeActivity"/>
-        <activity android:name=".ui.video.YoutubePlayerActivity"/>
+        <activity android:name=".intro.IntroActivity" />
+        <activity android:name=".intro.Intro2Activity" />
+        <activity android:name=".intro.Intro3Activity" />
+        <activity android:name=".learning.quiz.QuizStartingActivity" />
+        <activity android:name=".learning.quiz.QuizActivity" />
+        <activity android:name=".learning.video.YouTubeActivity"/>
+        <activity android:name=".learning.video.YoutubePlayerActivity"/>
         <activity android:name=".Home"/>
-        <activity android:name=".ui.flashcard.FlashcardDetailActivity"/>
-        <activity android:name=".ui.flashcard.FlashcardActivity"/>
+        <activity android:name=".learning.flashcard.FlashcardDetailActivity"/>
+        <activity android:name=".learning.flashcard.FlashcardActivity"/>
         <activity android:name=".MainActivity">
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

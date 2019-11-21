@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.nasa.ui.dashboard.DashboardFragment;
+import com.example.nasa.learning.dashboard.DashboardFragment;
+import com.example.nasa.learning.users.LeaderboardFragment;
+import com.example.nasa.learning.users.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -19,34 +21,24 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.container);
-        // I want there to be a Fragment in the slot from the start
+        // sets slot to dashboard to begin with
         Fragment fragment = new DashboardFragment();
         swapFragment(fragment);
         bottomNavigationView = findViewById(R.id.nav_view);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                // menuItem = the item on the bottom nav view that was selected
-                // The id's here belong to the items in the menu of the BottomnNavigationView
-                // The menu is chunked out as bottom_nav_menu.xml in the res > menu folder
+                //setting up bottom navigation bar, each tab changing
                 if (menuItem.getItemId() == R.id.home) {
                     Fragment fragment = new DashboardFragment();
                     swapFragment(fragment);
                     return true;
                 } else if (menuItem.getItemId() == R.id.leaderBoard) {
-                    Fragment fragment = new DashboardFragment();
+                    Fragment fragment = new LeaderboardFragment();
                     swapFragment(fragment);
                     return true;
                 } else if (menuItem.getItemId() == R.id.profile) {
-                    Fragment fragment = new DashboardFragment();
-//
-//                    // Here's just an example of passing information to the Fragment via Bundle
-//                    Bundle bundle = new Bundle();
-//                    bundle.putString("param1", "First Argument");
-//                    bundle.putString("param2", "Second Argument");
-//                    fragment.setArguments(bundle);
-//                    // End bundle part
-
+                    Fragment fragment = new ProfileFragment();
                     swapFragment(fragment);
                     return true;
                 }

@@ -1,4 +1,4 @@
-package com.example.nasa.ui.video;
+package com.example.nasa.learning.video;
 
 import android.content.Intent;
 import android.os.Bundle;

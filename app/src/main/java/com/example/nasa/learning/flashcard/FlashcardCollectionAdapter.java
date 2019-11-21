@@ -1,4 +1,4 @@
-package com.example.nasa.ui.flashcard;
+package com.example.nasa.learning.flashcard;
 
 import android.content.Context;
 import android.content.Intent;

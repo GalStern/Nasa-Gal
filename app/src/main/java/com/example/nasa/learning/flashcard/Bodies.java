@@ -1,4 +1,4 @@
-package com.example.nasa.ui.flashcard;
+package com.example.nasa.learning.flashcard;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
@@ -6,9 +6,11 @@ import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
+//declared an entity to be saved into the database
 @Entity
 public class Bodies {
-
+//this is the model class for a body in our solar system
+    //no two bodies have the same name so it's set as the primary key
     @NonNull
     @PrimaryKey
     @SerializedName("englishName")

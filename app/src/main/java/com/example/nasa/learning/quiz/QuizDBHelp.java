@@ -1,4 +1,4 @@
-package com.example.nasa.ui.quiz;
+package com.example.nasa.learning.quiz;
 
 import android.content.ContentValues;
 import android.content.Context;

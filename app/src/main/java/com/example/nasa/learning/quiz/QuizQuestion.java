@@ -1,4 +1,4 @@
-package com.example.nasa.ui.quiz;
+package com.example.nasa.learning.quiz;
 
 import android.os.Parcel;
 import android.os.Parcelable;

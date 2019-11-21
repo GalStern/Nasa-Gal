@@ -11,6 +11,8 @@
     <string name="playlist">Playlist</string>
     <string name="loading">Please give us a moment to load</string>
     <string name="scroll"> Scroll to the left to view more!</string>
+    <string name="friends"> Friends</string>
+    <string name="leaderboardtitle"> Leaderboard</string>
 
     <string name="flashcards">
         <br>

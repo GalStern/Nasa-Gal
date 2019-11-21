@@ -1,4 +1,4 @@
-package com.example.nasa.ui.intro;
+package com.example.nasa.intro;
 
 import androidx.appcompat.app.AppCompatActivity;
 

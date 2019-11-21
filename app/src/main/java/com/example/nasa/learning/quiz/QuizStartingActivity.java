@@ -1,4 +1,4 @@
-package com.example.nasa.ui.quiz;
+package com.example.nasa.learning.quiz;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nasa.R;
+import com.example.nasa.learning.flashcard.Database;
+import com.example.nasa.learning.users.User;
 
 public class QuizStartingActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_QUIZ = 1;

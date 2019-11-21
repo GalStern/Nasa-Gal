@@ -1,4 +1,4 @@
-package com.example.nasa.ui.dashboard;
+package com.example.nasa.learning.dashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nasa.R;
-import com.example.nasa.ui.quiz.QuizStartingActivity;
+import com.example.nasa.learning.quiz.QuizStartingActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
